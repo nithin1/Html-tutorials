@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Student registration
+        </title>
+        <style>
+        body{
+                background-color: rgb(101, 191, 226);
+                   }
+             h3 {
+                font-size: 25px;
+                text-align: center;
+                margin: 20px;
+                color: rgb(14, 1, 1);
+            }
+            ul {
+                background-color: aliceblue;
+                border: 1px solid;
+                width: 600px;
+                margin: 10px auto;
+                padding: 10px;
+            }
+            li {
+                list-style: none;
+                border: 1px solid #ccc;
+                margin: 10px;
+                padding: 10px;
+            }
+            .mandate {
+                color: rgb(47, 0, 255);
+            }
+        </style>
+    </head>
+    <body>
+        <h3>
+            STUDENT REGISTERATION PAGE
+        </h3>
+        <form>
+            <ul>
+                <li>
+                    FIRST NAME:
+                    <span class="mandate">*</span>
+                    <input type="text" name="ufirstname" placeholder="Enter User first Name ">
+                    
+                </li>
+                <li>
+                        LAST NAME:
+                        <span class="mandate">*</span>
+                    <input type="text" name="lname" placeholder="Enter User last name">
+                </li>
+                <li>
+                    Enter accont Password:
+                    <input type="password" name="actPwd">
+                </li>
+                <li>
+                    Gender:
+                    <input type="radio" name="gender" checked value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                </li>
+                <li>
+                    Country: 
+                    <select name="ucountry">
+                        <option value="">Select Country</option>
+                        <option value="India">India</option>
+                        <option value="China">China</option>
+                        <option value="Japan" selected>Japan</option>
+                        <option value="USA">USA</option>
+                    </select>
+                </li>
+                <li>
+                    How do you find us: 
+                    <select name="where">
+                        <option value="">where</option>
+                        <option value="google">google</option>
+                        <option value="friends">friends</option>
+                        <option value="relative" selected>relative</option>
+                        <option value="teacher">teacher</option>
+                    </select>
+                </li>
+                <li>
+                    Languages you know:
+                    English <input type="checkbox" name="lng_eng" required>
+                    Telugu <input type="checkbox" name="lng_tel">
+                    Hindi <input type="checkbox" name="lng_hin">
+                    URdu <input type="checkbox" name="lng_urd">
+                    
+                </li>
+                <li>
+                    <label for="abouturslf">
+                        Tell about urself (min 200 char)
+                    </label>
+                    <textarea name="abouturslf" id="" cols="50" rows="5"></textarea>
+                </li>
+                <li class="tacbox">
+                   <input id="checkbox" type="checkbox" />
+                    <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a>.</label>
+                </li>
+                <li>
+                    <!-- <input type="button" value="Register Details"> -->
+                    <input type="submit" value="Register Details">
+                </li>
+
+            </ul>
+        </form>
+    </body>
+</html>
