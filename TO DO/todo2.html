@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TO DO</title>
+    <style>
+        .container{
+                width: 100%;
+                min-height: 100vh;
+                background: linear-gradient(135deg, #acc3f1, #d7aadd);
+                padding: 10px;
+            }
+            .to-do{
+                width: 100%;
+                max-width: 540px;
+                background: #d3d9e7;
+                margin: 100px auto 20px;
+                padding: 30px 40px 70px;
+                border-radius: 10px;
+            }
+            .to-do h1{
+                color: #fdfbfb;
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            .row{
+                display: flex;
+                text-align: center;
+                justify-content: space-between;
+                background: #fdfbfb;
+                border-radius: 30px;
+                padding-left: 20px;
+                margin-bottom: 25px;
+            }
+            input{
+                border: none;
+                outline: none;
+                flex: 1;
+                background: transparent;
+                padding: 10px;
+                font-weight: 15px;
+            }
+            button{
+                border: none;
+                outline: none;
+                padding: 20px 40px;
+                background:#d299da ;
+                color: rgb(0, 4, 255);
+                font-size: 15px;
+                cursor: pointer;
+                border-radius: 40px;
+            }
+            ul li{
+                position: initial;
+                width: 100%;
+                max-width: 540px;
+                background: #f9f9fa;
+                margin: 10px 20px 10px -30px;
+                padding: 12px 8px 12px 8px;
+                border-radius: 100px;
+                list-style: none;
+                font-size: 25px;
+                user-select: none;
+                cursor: pointer;
+            }
+        ul li::before{
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="to-do">
+           <h1>TO-DO</h1>
+           <div class="row">
+                 <input type="text" id="input-box" placeholder="add to-do list">
+                 <button onclick="addTask()">ADD</button>
+           </div>
+            <div id="container">
+                <ul id="task-container"> </ul>
+            </div>
+            <div class="action">
+                   <button class="inprogress">inprogress</button>
+                   <button class="completed">completed</button>
+            </div> 
+            </div> 
+    </div>
+   
+    <script>
+           let inputBox=document.getElementById("input-box");
+           let listContainer=document.getElementById("task-container");
+           let act=document.getElementById("action");
+           function checkbox(){ 
+          
+            checkbox.type = "checkbox";
+            checkbox.name = "name";
+            checkbox.value = "value";
+            checkbox.id = "stat";
+            checkbox.onclick = status();
+            
+            
+        }
+        
+           function addTask(e){ 
+           
+           
+            if(inputBox.value ===''){
+                alert("add something...?");
+            }
+            else{
+                let li=document.createElement("li");
+                li.innerHTML=inputBox.value;
+                listContainer.appendChild(li);
+                let check=document.createElement("input");
+                check.type="checkbox";
+                li.prepend(check);
+                let new_act=document.createElement("div");
+                new_act.innerHTML=act.value;
+                listContainer.appendChild(new_act);
+
+            }
+
+            inputBox.value="";
+           
+                  }
+
+        
+           
+    </script>
+</body>
+</html>

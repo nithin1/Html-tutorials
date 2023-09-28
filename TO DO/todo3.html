@@ -1,0 +1,57 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>to-do list</title>
+       
+    </head>
+    <body>
+        <header>
+            <h>tasks</h>
+            <form id="taskform">
+                <input type="text" id="taskInput" placeholder="add list"\>
+                <input type="submit" id="newtaskinput" value="ADD"\>
+            </form>
+        </header>
+        <main>
+            <section class="taskList">
+               <!---task-list-->
+                <h2>List</h2>
+                <div id="tasks"><!--tasks-->
+                    <div class="task">
+                    <div class="content">
+                        <input type="text" class="text" placeholder="adaddd"\>
+                    </div>
+                    <div class="action">
+                        <button class="inprogress">inprogress</button>
+                        <button class="completed">completed</button>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script>
+            win
+                let form=document.querySelector("#taskform");
+                let input=document.querySelector("#taskInput");
+                let list_el=document.querySelector("#tasks");
+                form.addEventListener('submit',(e) => {
+                
+                    let task=input.value;
+                    if(!task){
+                        alert("please add list");
+                        return;
+                    }
+
+                    let task_el=document.createElement("div");
+                    task_el.classList.add("task");
+                    let taskContent=document.createElement("div");
+                    taskContent.classList.add("content");
+                    taskContent.innerHTML=task;
+                    task_el.appendChild(taskContent);
+                    list.appendChild(task_el);
+                });
+        </script>
+    </body>
+</html>>
